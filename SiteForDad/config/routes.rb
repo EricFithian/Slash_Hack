@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   as :user do
-    get '/schools/sign_up', to: 'users/registrations#new_school'
+    get '/users/sign_up', to: 'users/registrations#new_user'
     post '/users/registrations/', to: 'users/registrations#import'
   end
 
