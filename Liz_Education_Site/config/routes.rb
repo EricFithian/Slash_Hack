@@ -5,13 +5,17 @@ Rails.application.routes.draw do
   # as :user do
   #   post '/users/registrations/', to: 'users/registrations#import'
   # end
-  root :to => 'pages#index'
-  get "/about" => 'pages#about'
-  get "/contact" => 'pages#contact'
-  get "/template" => 'pages#template'
+  # root :to => 'pages#index'
+  # get "/about" => 'pages#about'
+  # get "/contact" => 'pages#contact'
+  # get "/template" => 'pages#template'
 
   resources :applications, only: [:index, :new, :show, :create, :edit, :update] do
     put :payment
+    resources :workshops, only: [:index, :new, :create, :edit, :update]
+    resources :courses, only: [:index, :new, :create, :edit, :update]
+    resources :workshops, only: [:index, :new, :create, :edit, :update]
+    
   end
 
   # resources :student_profiles, only: [:index, :create]
