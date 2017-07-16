@@ -1,0 +1,30 @@
+<article>
+  <% if flash[:error].present? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <p><%= flash[:error] %></p>
+  </div>
+  <% end %>
+</article>
+<div class="container classRegistrationsContainer">
+  <h1>Please select a class to register for:</h1>
+
+  <%= form_tag course_registrations_path, id: "payment-form" do %>
+
+  <%= select("class", "class_id", Class.all.collect {|class| [ class.name + " - " + number_to_currency(class.price), class.id ] }) %>
+  <div class="form-row">
+    <label for="card-element">
+      Please enter your Credit or Debit card info:
+    </label>
+    <div id="card-element">
+      <!-- a Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display Element errors -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <button class="btn btn-primary">Submit Payment</button>
+  <!-- </form> -->
+  <% end %>
+</div>
+
