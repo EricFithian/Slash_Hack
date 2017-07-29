@@ -1,0 +1,82 @@
+<!-- Breadcumb area start -->
+    <section class="breadcumb_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcumb_section">
+                        <div class="page_title">
+                            <h3><%= @title %></h3>
+                        </div>
+                        <div class="page_pagination">
+                            <ul>
+                                <li><%= link_to "Home", "/" %></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                <li><%= @title %></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Message Now Area Start ==================== -->
+    <section class="message_now_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="message_title">
+                        <h3>Please feel free to send us a message!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <form action="mail.php" method="post" id="main_contact_form">
+                        <div class="contact_input_area">
+                            <div id="success_fail_info"></div>
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name *">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Your E-mail *" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Your Subject *" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="number" name="number" class="form-control" id="number" placeholder="Your Number *" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" class="form-control" cols="30" rows="10" placeholder="Your Message *" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <button type="submit" class="btn btn-default">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== Message Now Area Start ==================== -->
+
+    <!-- ==================== Map and Contact Area Start ==================== -->
+    <div class="map_contact_address_area">
+        <!-- Map Area Start -->
+        <div class="map_area" id="googleMap"></div>
+    </div>
+    <!-- ==================== Map and Contact Area End ==================== -->
