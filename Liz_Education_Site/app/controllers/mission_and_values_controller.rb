@@ -1,0 +1,2 @@
+class MissionAndValuesController < ApplicationController
+end
