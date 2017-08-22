@@ -1,0 +1,2 @@
+class SchoolPackagesController < ApplicationController
+end
